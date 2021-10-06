@@ -1,6 +1,7 @@
 name: 'Test reusable workflows '
 on:
   push:
+  workflow_call:
 
 jobs:
   test:
