@@ -1,13 +1,14 @@
-name: 'Test reusable workflows '
+name: 'Reusable workflow'
 on:
-  push:
   workflow_call:
 
 jobs:
   test:
-    name: 'test'
+    name: 'reusable workflow'
     runs-on: 'ubuntu-20.04'
     steps:
       - uses: 'actions/checkout@v2.3.4'
+        name: 'checkout'
+      - name: 'test'
         run: |
-          echo "Test successful"
+          echo "Reusable workflow - Test successful"
